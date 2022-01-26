@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    border-radius: 7px;
+    box-sizing: border-box;
+    letter-spacing: 1.2px;
+}
+body{
+    background-color: rgb(75, 75, 75);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+#cloud{ 
+    z-index: 1;
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 1px #858585;
+    margin-top:70px;
+    width:350px;
+    height:120px;
+    border: none;
+    background:#858585;
+    box-shadow: 10px 10px rgba(0,0,0,0.2);
+    border-radius:100px;
+    transition: all .22s linear;
+}#cloud:hover{
+    transform: scale(1.07);
+    text-shadow: none;
+    background: rgb(37, 37, 37);
+}
+#cloud:active{
+    background: rgb(37, 37, 37);
+    transform: scale(.98);
+}
+#cloud::before,
+#cloud::after{
+    content: "";
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    background-color: inherit;
+    z-index: 5;
+}
+#cloud::before{
+    height: 100px;
+    width: 100px;
+    top: -50px;
+    left: 50px;
+}
+#cloud::after{
+    height: 150px;
+    width: 170px;
+    top: -200px;
+    left: 125px;
+}
